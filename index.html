@@ -3,73 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhomar H. Medalla | Executive Assistant & Virtual Support</title>
-    <meta name="description" content="Executive Assistant & Virtual Administrative Support Professional. BPO background in sales, customer service, and CRM documentation.">
-    
-    <!-- Google Fonts -->
+    <title>Jhomar Medalla | Executive Assistant & Sales Operations Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --bg-card-hover: #334155;
-            --accent-primary: #38bdf8;
+            --bg-primary: #0a0c10;
+            --bg-secondary: #12161f;
+            --bg-card: #1a202c;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
             --accent-glow: rgba(56, 189, 248, 0.15);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.1);
+            --border: #2d3748;
             --font-main: 'Plus Jakarta Sans', sans-serif;
-            --font-serif: 'Playfair Display', serif;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             font-family: var(--font-main);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* Header / Nav */
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
+            width: 100%;
+            background: rgba(10, 12, 16, 0.85);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
         }
 
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.25rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1.25rem 2rem;
         }
 
         .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
             text-decoration: none;
             letter-spacing: -0.5px;
         }
 
-        .logo span { color: var(--accent-primary); }
+        .logo span {
+            color: var(--accent);
+        }
 
         .nav-links {
             display: flex;
@@ -78,158 +74,165 @@
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.2s ease;
         }
 
-        .nav-links a:hover { color: var(--accent-primary); }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Main Wrapper */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border);
+        }
 
         /* Hero Section */
         .hero {
-            padding: 4rem 2rem 5rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding-top: 10rem;
+            padding-bottom: 6rem;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            display: inline-block;
+            background: var(--accent-glow);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
             border-radius: 50px;
-            color: var(--accent-primary);
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
 
         .hero h1 {
             font-size: 3.25rem;
-            line-height: 1.1;
-            font-weight: 800;
+            line-height: 1.15;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
         }
 
         .hero h1 em {
-            font-family: var(--font-serif);
-            font-style: italic;
-            color: var(--accent-primary);
+            font-style: normal;
+            color: var(--accent);
         }
 
         .hero p {
-            color: var(--text-muted);
-            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-size: 1.15rem;
             margin-bottom: 2.5rem;
-            max-width: 540px;
+            max-width: 580px;
         }
 
-        .cta-group {
+        .hero-cta {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.875rem 1.75rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .btn-primary {
-            background: var(--accent-primary);
-            color: #0f172a;
+            background: var(--accent);
+            color: #000;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Profile Card */
-        .profile-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .status-indicator {
+        .hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .hero-card-header {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
             font-size: 0.875rem;
-            color: #4ade80;
-            margin-bottom: 1rem;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            background: #4ade80;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #4ade80;
-        }
-
-        .profile-card h3 {
-            font-size: 1.75rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .profile-card .title {
-            color: var(--accent-primary);
-            font-weight: 600;
+            color: var(--text-secondary);
             margin-bottom: 1.5rem;
         }
 
-        .meta-list {
+        .hero-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-card-title {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-list {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
+            gap: 1rem;
             font-size: 0.95rem;
-            color: var(--text-muted);
         }
 
-        /* Sections */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .info-list li {
+            color: var(--text-secondary);
         }
 
+        .info-list strong {
+            color: var(--text-primary);
+        }
+
+        /* Section Titles */
         .section-header {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem;
         }
 
-        .section-tag {
-            color: var(--accent-primary);
+        .section-number {
+            color: var(--accent);
             font-size: 0.875rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -237,36 +240,35 @@
             margin-bottom: 0.5rem;
         }
 
-        .section-title {
+        .section-header h2 {
             font-size: 2.25rem;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
 
-        /* Grid Layouts */
+        /* Services & Grid */
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
         .card {
             background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
+            border: 1px solid var(--border);
             border-radius: 12px;
-            transition: all 0.3s ease;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .card:hover {
-            background: var(--bg-card-hover);
             transform: translateY(-4px);
-            border-color: rgba(56, 189, 248, 0.4);
+            border-color: var(--accent);
         }
 
         .card-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .card h3 {
@@ -275,305 +277,387 @@
         }
 
         .card p {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
         .tag-group {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1.25rem;
-            flex-wrap: wrap;
         }
 
         .tag {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
             padding: 0.25rem 0.75rem;
             border-radius: 4px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
         }
 
-        .workflow-grid {
+        /* Remote Work Infrastructure */
+        .infra-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
-        .step-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 12px;
+        .infra-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 10px;
         }
 
-        .step-number {
-            color: var(--accent-primary);
-            font-weight: 800;
-            font-size: 1.25rem;
+        .infra-card h4 {
+            color: var(--accent);
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
 
-        .pills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .pill {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
+        .infra-card p {
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1rem;
+        /* Hire Me / Form Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
         }
 
-        .faq-item details {
-            padding: 1.25rem 1.5rem;
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
         }
 
-        .faq-item summary {
-            font-weight: 600;
-            cursor: pointer;
-            list-style: none;
+        .contact-methods {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .contact-method-item {
+            display: flex;
             align-items: center;
+            gap: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            background: var(--bg-card);
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s ease;
         }
 
-        .faq-item summary::after {
-            content: "+";
-            font-size: 1.25rem;
-            color: var(--accent-primary);
+        .contact-method-item:hover {
+            border-color: var(--accent);
         }
 
-        .faq-item details[open] summary::after {
-            content: "−";
+        .hire-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 16px;
         }
 
-        .faq-item p {
-            margin-top: 1rem;
-            color: var(--text-muted);
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: var(--font-main);
             font-size: 0.95rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
         }
 
         footer {
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem;
+            padding: 3rem 0;
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         @media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
+            .hero, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <header>
         <nav>
             <a href="#home" class="logo">JH<span>.</span>M</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#work">Case Studies</a></li>
+                <li><a href="#infrastructure">Setup</a></li>
+                <li><a href="#contact">Hire Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="home">
+    <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
             <div>
-                <div class="hero-badge">Executive Assistant · Virtual Support</div>
-                <h1>Make your day feel <em>lighter.</em></h1>
-                <p>Hi, I’m Jhomar — a BPO professional transitioning into Executive Assistance, bringing strong communication, customer support, sales, CRM, and organization skills to remote teams.</p>
-                <div class="cta-group">
-                    <a href="#work" class="btn btn-primary">Explore My Work →</a>
-                    <a href="#contact" class="btn btn-secondary">Let’s Connect</a>
+                <span class="hero-badge">Executive Support & Sales Operations</span>
+                <h1>Protecting executive bandwidth & driving <em>revenue growth.</em></h1>
+                <p>Hi, I’m Jhomar Medalla — an Executive Assistant & Sales Operations Specialist with nearly 2 years of BPO experience managing high-stakes client communications, CRM records, and calendar workflows for US/global teams.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Hire Me →</a>
+                    <a href="#work" class="btn-secondary">Explore Work</a>
                 </div>
             </div>
 
-            <div class="profile-card">
-                <div class="status-indicator">
-                    <span class="dot"></span> Open to remote opportunities
+            <div class="hero-card">
+                <div class="hero-card-header">
+                    <span class="status-dot"></span> Available for Full-Time Remote Roles
                 </div>
                 <h3>Jhomar H. Medalla</h3>
-                <div class="title">Executive Assistant / Virtual Support</div>
-                <div class="meta-list">
-                    <div>📍 <strong>Based in:</strong> Philippines</div>
-                    <div>💼 <strong>Background:</strong> 2+ Years BPO (TTEC)</div>
-                    <div>⚡ <strong>Focus:</strong> Organization, CRM, Follow-through</div>
-                </div>
+                <div class="hero-card-title">Executive Assistant | Sales Operations | Client Support</div>
+                <ul class="info-list">
+                    <li>📍 <strong>Based in:</strong> Cebu, Philippines</li>
+                    <li>💼 <strong>BPO Background:</strong> TTEC (Sales) & Qualfon (CS)</li>
+                    <li>💻 <strong>Education:</strong> B.I.T. Computer Technology</li>
+                    <li>⚡ <strong>CRM Expertise:</strong> Verizon Optix, Salesforce/HubSpot style workflows</li>
+                </ul>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about">
             <div class="section-header">
-                <div class="section-tag">01 · About Me</div>
-                <h2 class="section-title">Professional, adaptable, and ready to support.</h2>
+                <div class="section-number">01 · About</div>
+                <h2>Structured, KPI-Driven & Tech-Enabled</h2>
             </div>
-            <div class="card">
-                <p>I’m a BPO professional with experience in client sales and service at TTEC. My background trained me to communicate clearly with English-speaking stakeholders, manage CRM platforms, document interactions accurately, and solve problems in fast-paced environments.</p>
-                <p style="margin-top: 1rem;">I am transitioning these core strengths into Executive Assistance—specializing in calendar optimization, inbox triage, task tracking, and administrative workflows.</p>
-            </div>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 850px; margin-bottom: 2rem;">
+                Trained in fast-paced BPO sales and customer support environments at TTEC and Qualfon, I bring a systematic approach to administrative work. Having handled inbound/outbound sales calls, objection resolution, and CRM records in <strong>Verizon’s Optix ecosystem</strong>, I combine strict attention to KPI targets (NVPC, 3DR, CSAT) with advanced administrative workflow management.
+            </p>
         </section>
 
-        <!-- Services -->
+        <!-- Services Section -->
         <section id="services">
             <div class="section-header">
-                <div class="section-tag">02 · Services</div>
-                <h2 class="section-title">Support that keeps work moving.</h2>
+                <div class="section-number">02 · Services</div>
+                <h2>High-Impact Executive & Sales Support</h2>
             </div>
             <div class="grid-3">
                 <div class="card">
                     <div class="card-icon">📅</div>
-                    <h3>Executive Assistance</h3>
-                    <p>Calendar coordination, meeting prep, focus-time blocking, and time-zone management.</p>
+                    <h3>Calendar & Time Optimization</h3>
+                    <p>Managing multi-time-zone schedules, setting priority focus blocks, eliminating meeting overlaps, and handling urgent reschedules smoothly.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">📧</div>
-                    <h3>Email Management</h3>
-                    <p>Inbox triage, priority categorization, drafting routine responses, and tracking follow-ups.</p>
+                    <div class="card-icon">📥</div>
+                    <h3>Inbox Triage & Communication</h3>
+                    <p>5-tier priority labeling, draft responses for routine queries, executive action-item flagging, and follow-up tracking.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Admin & Data Tracking</h3>
-                    <p>Spreadsheet updates, record management, documentation, and operational reporting.</p>
+                    <div class="card-icon">📈</div>
+                    <h3>Sales Pipeline & CRM Support</h3>
+                    <p>CRM updates (Optix/Salesforce style), ticket follow-ups, lead logging, objection documentation, and pipeline tracking.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Workflow -->
-        <section id="workflow">
-            <div class="section-header">
-                <div class="section-tag">03 · Workflow</div>
-                <h2 class="section-title">Simple systems. Clear outcomes.</h2>
-            </div>
-            <div class="workflow-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h3>Understand</h3>
-                    <p>Clarify goals, identify dependencies, set timelines, and align on deliverables.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h3>Organize</h3>
-                    <p>Build structured task lists, calendar layouts, and clear tracking mechanisms.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h3>Execute</h3>
-                    <p>Deliver consistent follow-through, keep stakeholders informed, and resolve bottlenecks.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Samples -->
+        <!-- EA Case Studies -->
         <section id="work">
             <div class="section-header">
-                <div class="section-tag">04 · Practical Case Studies</div>
-                <h2 class="section-title">Proof of how I think.</h2>
+                <div class="section-number">03 · Practical Workflows</div>
+                <h2>Interactive EA Case Studies</h2>
             </div>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Calendar Management</h3>
-                    <p>Resolved meeting conflicts, structured global time-zone blocks, and prioritized urgent calls.</p>
+                    <h3>Executive Calendar Management</h3>
+                    <p>Resolved meeting conflicts, structured global time-zone blocks, and prioritized urgent calls into a single functional schedule.</p>
                     <div class="tag-group">
                         <span class="tag">Google Calendar</span>
-                        <span class="tag">Prioritization</span>
+                        <span class="tag">Timezone Coordination</span>
                     </div>
                 </div>
+
                 <div class="card">
-                    <h3>Inbox Triage & Organization</h3>
-                    <p>Designed a label and filter system to separate urgent executive action items from routine feeds.</p>
+                    <h3>Inbox Triage & Systemization</h3>
+                    <p>Created a 5-tier priority filter system (Urgent, Action Required, Follow-Up, Reference, Low Priority) to accelerate inbox clearance.</p>
                     <div class="tag-group">
                         <span class="tag">Gmail</span>
-                        <span class="tag">Workflow</span>
+                        <span class="tag">Workflow Design</span>
                     </div>
                 </div>
+
                 <div class="card">
-                    <h3>Task & Project Tracker</h3>
-                    <p>Built a status tracker with ownership tags, deadline flags, and priority levels for team tasks.</p>
+                    <h3>Executive Task Tracker</h3>
+                    <p>Centralized multi-project status trackers with ownership tags, deadline flags, and priority filters in Google Sheets.</p>
                     <div class="tag-group">
                         <span class="tag">Google Sheets</span>
-                        <span class="tag">Tracking</span>
+                        <span class="tag">Asana Workflow</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Meeting Agenda & Action Logs</h3>
+                    <p>Converted raw meeting discussions into clean decision records with explicit owner tags, timelines, and next steps.</p>
+                    <div class="tag-group">
+                        <span class="tag">Google Docs</span>
+                        <span class="tag">Executive Briefing</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Business Research Brief</h3>
+                    <p>Prepared structured vendor comparisons analyzing software solutions against key selection criteria for executive decisions.</p>
+                    <div class="tag-group">
+                        <span class="tag">Market Research</span>
+                        <span class="tag">Vendor Analysis</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Business Travel Itinerary</h3>
+                    <p>Consolidated 3-day multi-city business trips into mobile-friendly master itineraries covering travel, meetings, and contingency notes.</p>
+                    <div class="tag-group">
+                        <span class="tag">Travel Operations</span>
+                        <span class="tag">Contingency Planning</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tools -->
-        <section id="tools">
+        <!-- Remote Setup / Infrastructure -->
+        <section id="infrastructure">
             <div class="section-header">
-                <div class="section-tag">05 · Tools & Proficiency</div>
-                <h2 class="section-title">Platforms I work with.</h2>
+                <div class="section-number">04 · Infrastructure</div>
+                <h2>Remote Reliability & Equipment</h2>
             </div>
-            <div class="pills-container">
-                <span class="pill">Google Workspace</span>
-                <span class="pill">Gmail & Calendar</span>
-                <span class="pill">MS Office 365</span>
-                <span class="pill">Trello / Asana</span>
-                <span class="pill">Slack & Zoom</span>
-                <span class="pill">CRM Platforms</span>
-                <span class="pill">Canva</span>
+            <div class="infra-grid">
+                <div class="infra-card">
+                    <h4>💻 Hardware Setup</h4>
+                    <p>HP ProBook 440 G11 (Intel Core Ultra 7 155U, 16GB DDR5 RAM, 512GB SSD)</p>
+                </div>
+                <div class="infra-card">
+                    <h4>⚡ High-Speed Connection</h4>
+                    <p>Converge Broadband (224.6 Mbps Download / 213.3 Mbps Upload)</p>
+                </div>
+                <div class="infra-card">
+                    <h4>🛠 Enterprise Software</h4>
+                    <p>Optix CRM, Google Workspace, MS 365, Trello, Slack, Zoom, Canva, ChatGPT</p>
+                </div>
             </div>
         </section>
 
-        <!-- FAQ -->
-        <section id="faq">
-            <div class="section-header">
-                <div class="section-tag">06 · FAQ</div>
-                <h2 class="section-title">Frequently asked questions.</h2>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>What is your background?</summary>
-                    <p>I have over 2 years of BPO experience with TTEC, specializing in sales, customer communication, and CRM documentation, now transitioning into full-time Executive Assistance.</p>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>Are you available for full-time remote roles?</summary>
-                    <p>Yes! I am fully equipped for remote communication across global time zones.</p>
-                </details>
-            </div>
-        </section>
-
-        <!-- Contact -->
+        <!-- Hire Me Section (Hazel Arevalo Style) -->
         <section id="contact">
             <div class="section-header">
-                <div class="section-tag">07 · Contact</div>
-                <h2 class="section-title">Let's work together.</h2>
+                <div class="section-number">05 · Contact</div>
+                <h2>Let's Build Something Great Together</h2>
             </div>
-            <div class="card">
-                <p style="margin-bottom: 1.5rem;">Reach out directly via email or LinkedIn to discuss how I can assist your business:</p>
-                <div class="cta-group">
-                    <a href="mailto:medallajhomar56@gmail.com" class="btn btn-primary">✉ Email Jhomar</a>
-                    <a href="https://www.linkedin.com/in/jhomar-medalla-329566365/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile</a>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Have an open role or need dedicated executive support? Fill out the inquiry form or reach out directly through email or WhatsApp.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:medallajhomar56@gmail.com" class="contact-method-item">
+                            <span>✉</span> medallajhomar56@gmail.com
+                        </a>
+                        <a href="https://wa.me/639850421775" target="_blank" class="contact-method-item">
+                            <span>💬</span> +63 985 042 1775 (WhatsApp)
+                        </a>
+                        <a href="https://linkedin.com/in/jhomarmedalla-329566365/" target="_blank" class="contact-method-item">
+                            <span>🔗</span> LinkedIn Profile
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Interactive Form sending directly to your email via Formspree -->
+                <form class="hire-form" action="https://formspree.io/f/medallajhomar56@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="sarah@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role / Project Needed</label>
+                        <select id="role" name="role" class="form-control" required>
+                            <option value="Executive Assistant">Executive Assistant</option>
+                            <option value="Sales Operations / Support">Sales Operations / Support</option>
+                            <option value="Customer Service VA">Customer Service VA</option>
+                            <option value="Other">Other Remote Role</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details or Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Tell me about your business needs or open role..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message →</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Jhomar H. Medalla · Executive Assistant Portfolio</p>
+        <p>© 2026 Jhomar H. Medalla · Executive Assistant & Sales Operations Portfolio</p>
     </footer>
+
 </body>
 </html>
