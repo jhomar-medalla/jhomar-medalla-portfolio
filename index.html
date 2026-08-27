@@ -1,256 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jhomar H. Medalla | Executive Assistant</title>
-<meta name="description" content="Jhomar H. Medalla — Executive Assistant and Virtual Administrative Support portfolio.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#17324d; --teal:#2d7f7b; --gold:#c79a4a; --cream:#f7f3ea;
-  --sage:#e8efe9; --paper:#fffdf8; --ink:#1f2933; --muted:#64748b;
-  --line:#d9e2e2; --white:#fff;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;width:min(1080px,92%);
-display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border:1px solid #ffffff80;
-background:#fffdf8dd;backdrop-filter:blur(16px);border-radius:18px;box-shadow:0 12px 40px #17324d12}
-.logo{font-weight:800;color:var(--navy);letter-spacing:-.03em}.logo span{color:var(--teal)}
-.navlinks{display:flex;gap:22px;font-size:13px;font-weight:600;color:var(--muted)}
-.navlinks a:hover{color:var(--teal)}
-.menu{display:none;border:0;background:none;font-size:22px}
-.hero{min-height:100vh;background:radial-gradient(circle at 78% 25%,#dfece5 0 12%,transparent 35%),linear-gradient(135deg,var(--cream),#fffdf8 60%);
-display:flex;align-items:center;position:relative;padding-top:80px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
-.eyebrow{font:600 12px "JetBrains Mono";color:var(--teal);letter-spacing:.12em;text-transform:uppercase}
-h1{font-family:"DM Serif Display",serif;font-size:clamp(55px,8vw,100px);line-height:.9;color:var(--navy);font-weight:400;margin:18px 0}
-h1 em{color:var(--teal);font-style:normal}
-.lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:650px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:.25s}
-.btn.primary{background:var(--navy);color:white}.btn.secondary{border:1px solid var(--line);background:white;color:var(--navy)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #17324d18}
-.hero-art{height:510px;position:relative;display:grid;place-items:center}
-.blob{width:340px;height:400px;border-radius:48% 52% 45% 55%;background:var(--sage);transform:rotate(7deg);position:absolute}
-.profile-card{position:relative;width:290px;padding:30px;border-radius:28px;background:#fff;box-shadow:0 25px 70px #17324d22;border:1px solid #fff}
-.avatar{width:92px;height:92px;border-radius:50%;background:var(--navy);display:grid;place-items:center;color:white;font:700 25px "DM Serif Display";margin-bottom:20px}
-.profile-card h3{font-size:21px;margin:0;color:var(--navy)} .profile-card p{font-size:12px;line-height:1.6;color:var(--muted)}
-.status{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;color:var(--teal);background:var(--sage);padding:8px 11px;border-radius:99px}
-.dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:pulse 1.8s infinite}
-.sticker{position:absolute;padding:12px 15px;border-radius:16px;background:white;box-shadow:0 15px 35px #17324d18;font-size:12px;font-weight:800;color:var(--navy);animation:float 4s ease-in-out infinite}
-.sticker.one{top:60px;right:10px;transform:rotate(6deg)}.sticker.two{bottom:65px;left:5px;transform:rotate(-7deg);animation-delay:.7s}
-.sticker.three{top:210px;left:-20px;transform:rotate(-4deg);animation-delay:1.2s}
-section{padding:105px 0}.cream{background:var(--cream)}.sage{background:var(--sage)}
-.section-head{max-width:700px;margin-bottom:42px}.kicker{font:600 11px "JetBrains Mono";color:var(--teal);letter-spacing:.12em;text-transform:uppercase}
-h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(40px,5vw,65px);line-height:1;color:var(--navy);margin:12px 0 15px}
-.section-head p{color:var(--muted);line-height:1.8}
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
-.about-text p{line-height:1.85;color:var(--muted)}
-.quote{border-left:4px solid var(--gold);padding:10px 0 10px 22px;font-family:"DM Serif Display";font-size:25px;line-height:1.35;color:var(--navy)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:24px;border:1px solid var(--line);border-radius:22px;background:#ffffffaa}
-.stat strong{font-family:"DM Serif Display";font-size:38px;color:var(--teal);display:block}.stat span{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{padding:27px;border-radius:25px;border:1px solid var(--line);background:white;transition:.3s;position:relative;overflow:hidden}
-.card:before{content:"";position:absolute;inset:auto -30px -60px auto;width:130px;height:130px;border-radius:50%;background:var(--sage);opacity:.7}
-.card:hover{transform:translateY(-8px);box-shadow:0 22px 45px #17324d18}
-.icon{font-size:28px;margin-bottom:16px}.card h3{color:var(--navy);font-size:17px;margin:0 0 9px}.card p{font-size:13px;line-height:1.7;color:var(--muted);position:relative}
-.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:25px;border-radius:24px;background:var(--navy);color:white;min-height:190px}.step b{font:600 12px "JetBrains Mono";color:#d9b86d}.step h3{font-size:19px;margin:18px 0 9px}.step p{font-size:13px;line-height:1.7;color:#dbe6ee}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{border:1px solid var(--line);border-radius:25px;padding:28px;background:white;transition:.3s}.project:hover{transform:translateY(-6px)}.project .num{font:600 12px "JetBrains Mono";color:var(--gold)}.project h3{color:var(--navy);font-size:21px}.project p{font-size:13px;line-height:1.7;color:var(--muted)}.pill{display:inline-block;margin:5px 4px 0 0;padding:7px 10px;background:var(--sage);border-radius:99px;font-size:10px;font-weight:700;color:var(--teal)}
-.timeline{border-left:2px solid #bdd0ce;padding-left:30px}.role{position:relative;margin-bottom:35px}.role:before{content:"";position:absolute;left:-38px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--gold);border:4px solid var(--cream)}.role h3{margin:0;color:var(--navy)}.role .meta{font:600 10px "JetBrains Mono";color:var(--teal);margin:6px 0 10px}.role p{color:var(--muted);line-height:1.7;font-size:13px}
-.tools{display:flex;flex-wrap:wrap;gap:12px}.tool{padding:12px 16px;border-radius:14px;background:white;border:1px solid var(--line);font-weight:700;font-size:12px;color:var(--navy);transition:.2s}.tool:hover{transform:rotate(-2deg) translateY(-3px);border-color:var(--teal)}
-.faq{max-width:800px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{cursor:pointer;font-weight:700;color:var(--navy)}.faq p{color:var(--muted);line-height:1.7;font-size:13px;padding-top:10px}
-.contact{background:var(--navy);color:white;border-radius:36px;padding:60px;position:relative;overflow:hidden}.contact:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:#2d7f7b55;right:-100px;top:-130px}.contact h2{color:white;position:relative;z-index:1}.contact p{color:#dbe6ee;max-width:650px;line-height:1.8;position:relative;z-index:1}.contact .btn{position:relative;z-index:1}.footer{text-align:center;padding:30px;color:var(--muted);font-size:11px}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -12px}} @keyframes pulse{50%{box-shadow:0 0 0 7px #2d7f7b22}}
-@media(max-width:800px){
- .navlinks{display:none}.menu{display:block}.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:130px}.hero-art{height:390px}.cards,.process{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.contact{padding:35px 25px}section{padding:75px 0}
- h1{font-size:65px}.hero-art .sticker.one{right:0}.hero-art .sticker.three{left:0}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhomar H. Medalla | Executive Assistant & Virtual Support</title>
+    <meta name="description" content="Executive Assistant & Virtual Administrative Support Professional. BPO background in sales, customer service, and CRM documentation.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --accent-primary: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent-primary); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-primary); }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 50px;
+            color: var(--accent-primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.25rem;
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 em {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent-primary);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-primary);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #4ade80;
+            margin-bottom: 1rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #4ade80;
+        }
+
+        .profile-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-card .title {
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-tag {
+            color: var(--accent-primary);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tag-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            color: var(--accent-primary);
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item details {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-size: 1.25rem;
+            color: var(--accent-primary);
+        }
+
+        .faq-item details[open] summary::after {
+            content: "−";
+        }
+
+        .faq-item p {
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
 <body>
-<nav>
-  <a class="logo" href="#home">JH<span>.</span>M</a>
-  <div class="navlinks">
-    <a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-  </div>
-  <button class="menu" aria-label="Menu">☰</button>
-</nav>
 
-<main id="home">
-<section class="hero">
- <div class="container hero-grid">
-  <div class="reveal">
-   <div class="eyebrow">Executive Assistant · Virtual Support</div>
-   <h1>Make your day<br>feel <em>lighter.</em></h1>
-   <p class="lead">Hi, I’m Jhomar — a BPO professional transitioning into Executive Assistance, bringing strong communication, customer support, sales, CRM, and organization skills to remote teams.</p>
-   <div class="ctas"><a class="btn primary" href="#work">Explore My Work →</a><a class="btn secondary" href="#contact">Let’s Connect</a></div>
-  </div>
-  <div class="hero-art reveal">
-   <div class="blob"></div>
-   <div class="sticker one">✦ Detail-oriented</div>
-   <div class="sticker two">☕ Remote-ready</div>
-   <div class="sticker three">✓ Reliable support</div>
-   <div class="profile-card">
-    <div class="avatar">JM</div>
-    <div class="status"><span class="dot"></span> Open to remote opportunities</div>
-    <h3 style="margin-top:18px">Jhomar H. Medalla</h3>
-    <p>Executive Assistant<br>Virtual Administrative Support</p>
-    <p><b>Based in:</b> Philippines<br><b>Background:</b> 2+ years BPO</p>
-   </div>
-  </div>
- </div>
-</section>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">JH<span>.</span>M</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="about" class="cream">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">01 · About Me</div><h2>Professional, adaptable, and ready to learn.</h2></div>
-  <div class="about-grid">
-   <div class="about-text reveal">
-    <p>I’m a BPO professional with experience in sales and customer service, including sales experience at TTEC. My background trained me to communicate with English-speaking customers, understand needs, handle concerns, document interactions, use CRM systems, and perform in KPI-driven environments.</p>
-    <p>I’m now intentionally moving those transferable skills into Executive Assistance. I’m building practical capability in calendar management, email organization, meeting support, research, task tracking, and administrative workflows.</p>
-    <div class="quote">“My goal is to become the person an executive can trust to keep things organized, moving, and followed through.”</div>
-   </div>
-   <div class="stats reveal">
-    <div class="stat"><strong>2+</strong><span>Years BPO</span></div>
-    <div class="stat"><strong>Sales</strong><span>TTEC Experience</span></div>
-    <div class="stat"><strong>CRM</strong><span>Documentation</span></div>
-    <div class="stat"><strong>100%</strong><span>Remote Focus</span></div>
-   </div>
-  </div>
- </div>
-</section>
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div>
+                <div class="hero-badge">Executive Assistant · Virtual Support</div>
+                <h1>Make your day feel <em>lighter.</em></h1>
+                <p>Hi, I’m Jhomar — a BPO professional transitioning into Executive Assistance, bringing strong communication, customer support, sales, CRM, and organization skills to remote teams.</p>
+                <div class="cta-group">
+                    <a href="#work" class="btn btn-primary">Explore My Work →</a>
+                    <a href="#contact" class="btn btn-secondary">Let’s Connect</a>
+                </div>
+            </div>
 
-<section id="services">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">02 · Services</div><h2>Support that keeps work moving.</h2><p>Practical administrative and communication support designed around organization, follow-through, and a professional client experience.</p></div>
-  <div class="cards">
-   <article class="card reveal"><div class="icon">📅</div><h3>Executive Assistance</h3><p>Calendar coordination, scheduling, meeting preparation, follow-ups, and administrative support.</p></article>
-   <article class="card reveal"><div class="icon">📧</div><h3>Email Management</h3><p>Inbox organization, email triage, professional drafting, prioritization, and follow-up tracking.</p></article>
-   <article class="card reveal"><div class="icon">📊</div><h3>Administrative Support</h3><p>Data entry, spreadsheets, documentation, file organization, and information tracking.</p></article>
-   <article class="card reveal"><div class="icon">🔎</div><h3>Research Support</h3><p>Online research, vendor comparisons, concise summaries, and decision-ready information.</p></article>
-   <article class="card reveal"><div class="icon">💬</div><h3>Client Communication</h3><p>Clear, professional communication with customers, clients, vendors, and internal stakeholders.</p></article>
-   <article class="card reveal"><div class="icon">📋</div><h3>Task Coordination</h3><p>Task trackers, deadlines, status updates, action items, and structured follow-through.</p></article>
-  </div>
- </div>
-</section>
+            <div class="profile-card">
+                <div class="status-indicator">
+                    <span class="dot"></span> Open to remote opportunities
+                </div>
+                <h3>Jhomar H. Medalla</h3>
+                <div class="title">Executive Assistant / Virtual Support</div>
+                <div class="meta-list">
+                    <div>📍 <strong>Based in:</strong> Philippines</div>
+                    <div>💼 <strong>Background:</strong> 2+ Years BPO (TTEC)</div>
+                    <div>⚡ <strong>Focus:</strong> Organization, CRM, Follow-through</div>
+                </div>
+            </div>
+        </section>
 
-<section class="sage">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">03 · My Workflow</div><h2>Simple systems. Clear outcomes.</h2></div>
-  <div class="process">
-   <div class="step reveal"><b>01 · UNDERSTAND</b><h3>Clarify the priority</h3><p>I identify the goal, deadline, dependencies, stakeholders, and what “done” looks like.</p></div>
-   <div class="step reveal"><b>02 · ORGANIZE</b><h3>Build the system</h3><p>I turn information into a calendar, checklist, tracker, document, or workflow that is easy to follow.</p></div>
-   <div class="step reveal"><b>03 · FOLLOW THROUGH</b><h3>Keep it moving</h3><p>I document next steps, monitor deadlines, communicate updates, and flag issues early.</p></div>
-  </div>
- </div>
-</section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <div class="section-tag">01 · About Me</div>
+                <h2 class="section-title">Professional, adaptable, and ready to support.</h2>
+            </div>
+            <div class="card">
+                <p>I’m a BPO professional with experience in client sales and service at TTEC. My background trained me to communicate clearly with English-speaking stakeholders, manage CRM platforms, document interactions accurately, and solve problems in fast-paced environments.</p>
+                <p style="margin-top: 1rem;">I am transitioning these core strengths into Executive Assistance—specializing in calendar optimization, inbox triage, task tracking, and administrative workflows.</p>
+            </div>
+        </section>
 
-<section id="work">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">04 · Work Samples</div><h2>Proof of how I think.</h2><p>These are simulated practice projects created to demonstrate readiness for Executive Assistant work. They are not presented as paid client projects.</p></div>
-  <div class="project-grid">
-   <article class="project reveal"><div class="num">01 · CALENDAR</div><h3>Executive Calendar Management</h3><p>Reviewed competing meeting requests, conflicts, priorities, focus blocks, and time-zone considerations to create a clean weekly schedule.</p><span class="pill">Google Calendar</span><span class="pill">Prioritization</span></article>
-   <article class="project reveal"><div class="num">02 · INBOX</div><h3>Email Triage & Organization</h3><p>Created an inbox system for urgent items, action-required messages, follow-ups, reference material, and low-priority communication.</p><span class="pill">Gmail</span><span class="pill">Follow-up</span></article>
-   <article class="project reveal"><div class="num">03 · TASKS</div><h3>Executive Task Tracker</h3><p>Built a structured tracker using task, owner, priority, deadline, status, and notes to keep work visible.</p><span class="pill">Sheets</span><span class="pill">Tracking</span></article>
-   <article class="project reveal"><div class="num">04 · MEETINGS</div><h3>Meeting Agenda & Action Items</h3><p>Turned meeting discussion into decisions, owners, deadlines, and follow-up actions that can be tracked after the meeting.</p><span class="pill">Docs</span><span class="pill">Documentation</span></article>
-   <article class="project reveal"><div class="num">05 · RESEARCH</div><h3>Business Research Brief</h3><p>Compared potential tools or vendors and organized findings into a concise, decision-ready summary.</p><span class="pill">Research</span><span class="pill">Sheets</span></article>
-   <article class="project reveal"><div class="num">06 · TRAVEL</div><h3>Executive Travel Itinerary</h3><p>Centralized meeting, transport, accommodation, timing, contacts, and contingency details into one practical itinerary.</p><span class="pill">Planning</span><span class="pill">Organization</span></article>
-  </div>
- </div>
-</section>
+        <!-- Services -->
+        <section id="services">
+            <div class="section-header">
+                <div class="section-tag">02 · Services</div>
+                <h2 class="section-title">Support that keeps work moving.</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Executive Assistance</h3>
+                    <p>Calendar coordination, meeting prep, focus-time blocking, and time-zone management.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3>Email Management</h3>
+                    <p>Inbox triage, priority categorization, drafting routine responses, and tracking follow-ups.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Admin & Data Tracking</h3>
+                    <p>Spreadsheet updates, record management, documentation, and operational reporting.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="experience" class="cream">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">05 · Experience</div><h2>What my BPO background brings to the table.</h2></div>
-  <div class="timeline reveal">
-   <div class="role"><h3>TTEC · Sales Representative</h3><div class="meta">SALES · CUSTOMER COMMUNICATION · CRM · KPIs</div><p>Worked with English-speaking customers, identified needs, recommended solutions, handled objections, documented interactions, and worked toward sales and performance targets.</p></div>
-   <div class="role"><h3>Customer Service Experience</h3><div class="meta">SUPPORT · PROBLEM SOLVING · FOLLOW-UP</div><p>Handled customer inquiries, concerns, account-related requests, and follow-ups while maintaining professionalism, accuracy, and composure in a fast-paced environment.</p></div>
-  </div>
-  <div style="margin-top:45px" class="reveal">
-   <div class="kicker">Transferable Skills</div>
-   <div class="tools" style="margin-top:16px">
-    <span class="tool">English Communication</span><span class="tool">CRM Documentation</span><span class="tool">Multitasking</span><span class="tool">Customer Support</span><span class="tool">Sales</span><span class="tool">Problem Solving</span><span class="tool">Follow-up</span><span class="tool">KPI Mindset</span>
-   </div>
-  </div>
- </div>
-</section>
+        <!-- Workflow -->
+        <section id="workflow">
+            <div class="section-header">
+                <div class="section-tag">03 · Workflow</div>
+                <h2 class="section-title">Simple systems. Clear outcomes.</h2>
+            </div>
+            <div class="workflow-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Understand</h3>
+                    <p>Clarify goals, identify dependencies, set timelines, and align on deliverables.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Organize</h3>
+                    <p>Build structured task lists, calendar layouts, and clear tracking mechanisms.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Execute</h3>
+                    <p>Deliver consistent follow-through, keep stakeholders informed, and resolve bottlenecks.</p>
+                </div>
+            </div>
+        </section>
 
-<section>
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">06 · Tools</div><h2>Tools I’m building practical proficiency with.</h2></div>
-  <div class="tools reveal">
-   <span class="tool">Gmail</span><span class="tool">Google Calendar</span><span class="tool">Google Drive</span><span class="tool">Google Docs</span><span class="tool">Google Sheets</span><span class="tool">Google Meet</span>
-   <span class="tool">Microsoft Outlook</span><span class="tool">Word</span><span class="tool">Excel</span><span class="tool">PowerPoint</span><span class="tool">Slack</span><span class="tool">Zoom</span><span class="tool">Microsoft Teams</span><span class="tool">Trello</span><span class="tool">Asana</span><span class="tool">Canva</span><span class="tool">CRM Platforms</span>
-  </div>
- </div>
-</section>
+        <!-- Work Samples -->
+        <section id="work">
+            <div class="section-header">
+                <div class="section-tag">04 · Practical Case Studies</div>
+                <h2 class="section-title">Proof of how I think.</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Calendar Management</h3>
+                    <p>Resolved meeting conflicts, structured global time-zone blocks, and prioritized urgent calls.</p>
+                    <div class="tag-group">
+                        <span class="tag">Google Calendar</span>
+                        <span class="tag">Prioritization</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Inbox Triage & Organization</h3>
+                    <p>Designed a label and filter system to separate urgent executive action items from routine feeds.</p>
+                    <div class="tag-group">
+                        <span class="tag">Gmail</span>
+                        <span class="tag">Workflow</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Task & Project Tracker</h3>
+                    <p>Built a status tracker with ownership tags, deadline flags, and priority levels for team tasks.</p>
+                    <div class="tag-group">
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="sage">
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">07 · Why Me</div><h2>What you can expect from me.</h2></div>
-  <div class="cards">
-   <article class="card reveal"><div class="icon">01</div><h3>Communication First</h3><p>I’m comfortable communicating professionally with English-speaking customers and stakeholders.</p></article>
-   <article class="card reveal"><div class="icon">02</div><h3>Fast Learner</h3><p>I can adapt to new tools, processes, scripts, and client preferences quickly.</p></article>
-   <article class="card reveal"><div class="icon">03</div><h3>Process-Minded</h3><p>I like checklists, trackers, documentation, and systems that reduce missed details.</p></article>
-   <article class="card reveal"><div class="icon">04</div><h3>Customer-Focused</h3><p>My BPO background taught me to listen, stay calm, and protect the quality of every interaction.</p></article>
-   <article class="card reveal"><div class="icon">05</div><h3>Goal-Oriented</h3><p>I’m accustomed to measurable performance expectations and taking ownership of results.</p></article>
-   <article class="card reveal"><div class="icon">06</div><h3>Remote-Ready</h3><p>I’m preparing specifically for independent remote work that requires reliability and follow-through.</p></article>
-  </div>
- </div>
-</section>
+        <!-- Tools -->
+        <section id="tools">
+            <div class="section-header">
+                <div class="section-tag">05 · Tools & Proficiency</div>
+                <h2 class="section-title">Platforms I work with.</h2>
+            </div>
+            <div class="pills-container">
+                <span class="pill">Google Workspace</span>
+                <span class="pill">Gmail & Calendar</span>
+                <span class="pill">MS Office 365</span>
+                <span class="pill">Trello / Asana</span>
+                <span class="pill">Slack & Zoom</span>
+                <span class="pill">CRM Platforms</span>
+                <span class="pill">Canva</span>
+            </div>
+        </section>
 
-<section>
- <div class="container">
-  <div class="section-head reveal"><div class="kicker">08 · FAQ</div><h2>Questions employers may have.</h2></div>
-  <div class="faq reveal">
-   <details><summary>Do you have formal Executive Assistant experience?</summary><p>I’m transitioning into Executive Assistance from a BPO background. I’m transparent about that and have created simulated EA projects to demonstrate practical readiness.</p></details>
-   <details><summary>What is your strongest transferable skill?</summary><p>Professional communication. My BPO experience taught me how to listen, clarify needs, document accurately, manage concerns, and communicate clearly under pressure.</p></details>
-   <details><summary>How do you learn unfamiliar software?</summary><p>I learn the workflow first, then the software. I use documentation, practice tasks, and structured notes to become productive quickly.</p></details>
-   <details><summary>How do you prioritize tasks?</summary><p>I consider urgency, business impact, deadline, dependencies, and who is waiting on the task. When something is unclear, I clarify priorities rather than guessing.</p></details>
-   <details><summary>Can you work with international teams?</summary><p>Yes. I’m comfortable communicating in English and adapting to remote workflows and different business hours.</p></details>
-  </div>
- </div>
-</section>
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="section-header">
+                <div class="section-tag">06 · FAQ</div>
+                <h2 class="section-title">Frequently asked questions.</h2>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>What is your background?</summary>
+                    <p>I have over 2 years of BPO experience with TTEC, specializing in sales, customer communication, and CRM documentation, now transitioning into full-time Executive Assistance.</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Are you available for full-time remote roles?</summary>
+                    <p>Yes! I am fully equipped for remote communication across global time zones.</p>
+                </details>
+            </div>
+        </section>
 
-<section id="contact">
- <div class="container">
-  <div class="contact reveal">
-   <div class="kicker" style="color:#d9b86d">09 · Contact</div>
-   <h2>Ready to work together?</h2>
-   <p>I’m open to Executive Assistant, Virtual Assistant, Administrative Support, and remote customer/client support opportunities.</p>
-   <div class="ctas">
-    <a class="btn" style="background:white;color:var(--navy)" href="mailto:medallajhomar56@gmail.com">Email Me</a>
-    <a class="btn" style="border:1px solid #ffffff55;color:white" href="https://www.linkedin.com/in/jhomar-medalla-329566365/" target="_blank" rel="noopener">LinkedIn</a>
-   </div>
-   <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:1">
-    <a href="mailto:medallajhomar56@gmail.com" style="color:white;text-decoration:none;border:1px solid #ffffff33;padding:10px 14px;border-radius:999px;font-size:12px">✉ medallajhomar56@gmail.com</a>
-    <a href="tel:+639850421775" style="color:white;text-decoration:none;border:1px solid #ffffff33;padding:10px 14px;border-radius:999px;font-size:12px">☎ +63 985 042 1775</a>
-   </div>
-   <p style="font-size:12px;margin-top:18px">Jhomar H. Medalla · Philippines · Remote-ready</p>
-  </div>
- </div>
-</section>
-</main>
-<footer class="footer">© 2026 Jhomar H. Medalla · Executive Assistant Portfolio · Sample projects are clearly labeled for accuracy.</footer>
+        <!-- Contact -->
+        <section id="contact">
+            <div class="section-header">
+                <div class="section-tag">07 · Contact</div>
+                <h2 class="section-title">Let's work together.</h2>
+            </div>
+            <div class="card">
+                <p style="margin-bottom: 1.5rem;">Reach out directly via email or LinkedIn to discuss how I can assist your business:</p>
+                <div class="cta-group">
+                    <a href="mailto:medallajhomar56@gmail.com" class="btn btn-primary">✉ Email Jhomar</a>
+                    <a href="https://www.linkedin.com/in/jhomar-medalla-329566365/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<script>
-const observer=new IntersectionObserver((entries)=>{
- entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.querySelector('.menu').addEventListener('click',()=>{
- const n=document.querySelector('.navlinks');
- n.style.display=n.style.display==='flex'?'none':'flex';
- n.style.position='absolute';n.style.top='58px';n.style.right='10px';n.style.flexDirection='column';
- n.style.background='white';n.style.padding='16px';n.style.borderRadius='15px';n.style.boxShadow='0 15px 35px #17324d18';
-});
-</script>
+    <footer>
+        <p>© 2026 Jhomar H. Medalla · Executive Assistant Portfolio</p>
+    </footer>
 </body>
 </html>
